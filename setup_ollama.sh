@@ -7,7 +7,7 @@ BOLD='\033[1m'
 NC='\033[0m' # 无颜色
 
 # 总步骤数
-TOTAL_STEPS=10
+TOTAL_STEPS=11
 CURRENT_STEP=0
 
 # 打印进度消息的函数
@@ -27,7 +27,7 @@ OLLAMA_INSTALL_DIR="/data1/$USERNAME/ollama"
 # 1. 下载 Ollama
 if [ ! -f "$OLLAMA_TGZ" ]; then
     print_progress "开始下载 Ollama"
-    wget -c -O "$OLLAMA_TGZ" "https://github.com/ollama/ollama/releases/download/v0.6.8/ollama-linux-amd64.tgz"
+    wget -c --no-check-certificate -O "$OLLAMA_TGZ" "https://github.com/ollama/ollama/releases/download/v0.6.8/ollama-linux-amd64.tgz"
     print_progress "Ollama 下载完成"
 else
     print_progress "Ollama 已存在，跳过下载"
@@ -54,6 +54,9 @@ print_progress "启动 Ollama 服务器"
 tmux new -d -s ollama-server "ollama serve"
 print_progress "Ollama 服务器启动完成"
 
-# 5. 运行模型
-print_progress "环境配置成功，现在重启终端，输入 ollama run qwen:0.5b 试试叭~要记得先重启哦"
+# 5. 删除安装包文件
+print_progress "删除 Ollama 安装包文件"
+rm -f "$OLLAMA_TGZ"
 
+# 6. 最终提示
+print_progress "环境配置成功，现在重启终端，输入 ollama run qwen:0.5b 试试叭~要记得先重启哦"
