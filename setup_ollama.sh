@@ -27,7 +27,7 @@ OLLAMA_INSTALL_DIR="/data1/$USERNAME/ollama"
 # 1. 下载 Ollama
 if [ ! -f "$OLLAMA_TGZ" ]; then
     print_progress "开始下载 Ollama"
-    wget -c -O "$OLLAMA_TGZ" "https://github.com/ollama/ollama/releases/download/v0.5.7/ollama-linux-amd64.tgz"
+    wget -c -O "$OLLAMA_TGZ" "https://github.com/ollama/ollama/releases/download/v0.6.8/ollama-linux-amd64.tgz"
     print_progress "Ollama 下载完成"
 else
     print_progress "Ollama 已存在，跳过下载"
