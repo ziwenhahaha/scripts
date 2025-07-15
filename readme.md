@@ -15,7 +15,7 @@
 ### 使用方法
 登录到怀柔节点，然后直接执行仓库根目录下的setup_anaconda.sh
 ```bash
-wget -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_anaconda.sh | bash
+wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_anaconda.sh | bash
 ```
 
 ## setup_ollama.sh
@@ -31,7 +31,7 @@ wget -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/maste
 ### 使用方法
 直接执行仓库根目录下的setup_ollama.sh
 ```bash
-wget -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_ollama.sh | bash
+wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_ollama.sh | bash
 ```
 
 ## setup_vscode_patch.sh
@@ -53,7 +53,7 @@ wget -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/maste
 
 2、执行setup_vscode_patch.sh脚本
 ```bash 
-wget -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_vscode_patch.sh | bash
+wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/setup_vscode_patch.sh | bash
 ```
 安装完毕后，打补丁脚本不会自动触发，需要通过连接ssh的时候来触发这个打补丁。所以第四步需要重启vscode两次。
 
