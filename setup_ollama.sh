@@ -21,7 +21,7 @@ print_progress() {
 USERNAME=$(whoami)
 
 # Ollama 下载文件路径
-OLLAMA_TGZ="/data1/tmp/ollama-linux-amd64.tgz"
+OLLAMA_TGZ="/data1/$USERNAME/tmp/ollama-linux-amd64.tgz"
 OLLAMA_INSTALL_DIR="/data1/$USERNAME/ollama"
 
 # 1. 下载 Ollama
