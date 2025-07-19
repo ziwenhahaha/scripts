@@ -42,6 +42,13 @@ print_progress "Ollama 解压完成"
 
 # 3. 配置环境变量
 print_progress "配置环境变量"
+
+# 检查并删除已有的配置
+for VAR in "PATH" "OLLAMA_HOST" "OLLAMA_MODELS" "OLLAMA_TMPDIR" "OLLAMA_KEEP_ALIVE"; do
+    grep -q "export $VAR=" $HOME/.bashrc && sed -i "/export $VAR=/d" $HOME/.bashrc
+done
+
+# 添加新配置
 echo 'export PATH="'$OLLAMA_INSTALL_DIR'/bin:$PATH"' >> $HOME/.bashrc
 echo 'export OLLAMA_HOST=0.0.0.0:11111' >> $HOME/.bashrc
 echo 'export OLLAMA_MODELS="'$OLLAMA_INSTALL_DIR'/models"' >> $HOME/.bashrc
