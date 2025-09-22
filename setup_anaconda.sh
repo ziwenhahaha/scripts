@@ -29,7 +29,7 @@ mkdir -p $INSTALL_PATH
 mkdir -p /data1/tmp
 
 # 检查Anaconda安装文件是否已经存在
-ANACONDA_INSTALLER="/data1/tmp/anaconda.sh"
+ANACONDA_INSTALLER="$INSTALL_PATH/anaconda.sh"
 if [ -f "$ANACONDA_INSTALLER" ]; then
     print_progress "检测到Anaconda安装文件已存在，跳过下载步骤..."
 else
