@@ -21,12 +21,11 @@ print_progress() {
 
 # 获取当前用户名
 USERNAME=$(whoami)
-INSTALL_PATH="/data1/$USERNAME"
+INSTALL_PATH="/home/$USERNAME"
 
 # 创建安装目录和临时目录（如果不存在）
 print_progress "创建安装目录..."
 mkdir -p $INSTALL_PATH
-mkdir -p /data1/tmp
 
 # 检查Anaconda安装文件是否已经存在
 ANACONDA_INSTALLER="$INSTALL_PATH/anaconda.sh"
