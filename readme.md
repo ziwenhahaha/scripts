@@ -67,5 +67,7 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 
 4、重启vscode两次，第一次是为了打补丁，第二次是正常进入
 
+5、若不行，请把ssh extension更新到最新版
+
 ### 注意事项
 - setup_vscode_patch.sh依赖于先安装anaconda
