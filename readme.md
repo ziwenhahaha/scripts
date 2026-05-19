@@ -71,3 +71,13 @@ wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/s
 
 ### 注意事项
 - setup_vscode_patch.sh依赖于先安装anaconda
+
+## undo_setup_vscode_patch.sh
+回滚之前的vscode ubuntu18.04补丁，若20.04以上需先删除之前的补丁才能使用
+
+客户端需要设置一个东西：在设置里面把remote.ssh.use exec server 的勾上，**图上是之前的图，需要勾上才对**：
+![](./images/local_vscode_setting.png)
+
+```bash
+wget --no-check-certificate -O - https://raw.githubusercontent.com/ziwenhahaha/scripts/refs/heads/master/undo_setup_vscode_patch.sh | bash
+```
